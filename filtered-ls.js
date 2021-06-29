@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 
 function filterFiles(files, ext) {
-  files.filter((file) => path.extname(file) === ext)
+  files
+    .filter((file) => path.extname(file) === ext)
     .forEach((file) => console.log(file));
 }
 

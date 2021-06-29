@@ -17,5 +17,4 @@ function filterFiles(directory, extName, callback) {
   });
 }
 
-
 module.exports = filterFiles;

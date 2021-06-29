@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-function callback (err, data) {
+function callback(err, data) {
   if (err) {
     console.log(err);
     return;
