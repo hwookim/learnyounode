@@ -10,12 +10,8 @@ server.on("request", (req, res) => {
     return;
   }
 
-  let body = "";
-  req.on("data", (chunk) => (body += chunk.toString().toUpperCase()));
-  req.on("end", () => {
-    res.write(body);
-    res.end();
-  });
+  req.on("data", (chunk) => res.write(chunk.toString().toUpperCase()));
+  req.on("end", () => res.end());
 });
 
 server.listen(port);
